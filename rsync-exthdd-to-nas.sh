@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-set -eux
-mountpoint=/Volumes/Photos
-exthddDir=/Volumes/cg_exthd_hfs/Photos/2018
-nasDir=/Volumes/Photos/2018
+set -ux
+mountpoint=/Volumes/photos
+exthddDir=/Volumes/ColinGarvey_T5/Photos
+nasDir=/Volumes/photos
 
 SRC=$exthddDir
 TGT=$nasDir
@@ -18,11 +18,10 @@ if [ ! -d ${mountpoint} ]; then
 	mount_smbfs //garveyc1@garveynas.local/Photos ${mountpoint}
 fi
 
-
-
 rsync -avvu  \
-	--ignore-existing \
 	--itemize-changes \
 	--progress \
+    --no-perms \
+    --no-owner \
+    --no-group \
 	"${SRC}/" "$TGT"
-#	--rsync-path=/bin/rsync \

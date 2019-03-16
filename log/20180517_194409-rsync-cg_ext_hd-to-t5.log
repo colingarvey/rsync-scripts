@@ -1,0 +1,136 @@
+2018/05/17 19:44:09 [59875] rsync  version 2.6.9  protocol version 29
+2018/05/17 19:44:09 [59875] Copyright (C) 1996-2006 by Andrew Tridgell, Wayne Davison, and others.
+2018/05/17 19:44:09 [59875] <http://rsync.samba.org/>
+2018/05/17 19:44:09 [59875] Capabilities: 64-bit files, socketpairs, hard links, symlinks, batchfiles,
+2018/05/17 19:44:09 [59875]               inplace, IPv6, 64-bit system inums, 64-bit internal inums
+2018/05/17 19:44:09 [59875] 
+2018/05/17 19:44:09 [59875] rsync comes with ABSOLUTELY NO WARRANTY.  This is free software, and you
+2018/05/17 19:44:09 [59875] are welcome to redistribute it under certain conditions.  See the GNU
+2018/05/17 19:44:09 [59875] General Public Licence for details.
+2018/05/17 19:44:09 [59875] 
+2018/05/17 19:44:09 [59875] rsync is a file transfer program capable of efficient remote update
+2018/05/17 19:44:09 [59875] via a fast differencing algorithm.
+2018/05/17 19:44:09 [59875] 
+2018/05/17 19:44:09 [59875] Usage: rsync [OPTION]... SRC [SRC]... DEST
+2018/05/17 19:44:09 [59875]   or   rsync [OPTION]... SRC [SRC]... [USER@]HOST:DEST
+2018/05/17 19:44:09 [59875]   or   rsync [OPTION]... SRC [SRC]... [USER@]HOST::DEST
+2018/05/17 19:44:09 [59875]   or   rsync [OPTION]... SRC [SRC]... rsync://[USER@]HOST[:PORT]/DEST
+2018/05/17 19:44:09 [59875]   or   rsync [OPTION]... [USER@]HOST:SRC [DEST]
+2018/05/17 19:44:09 [59875]   or   rsync [OPTION]... [USER@]HOST::SRC [DEST]
+2018/05/17 19:44:09 [59875]   or   rsync [OPTION]... rsync://[USER@]HOST[:PORT]/SRC [DEST]
+2018/05/17 19:44:09 [59875] The ':' usages connect via remote shell, while '::' & 'rsync://' usages connect
+2018/05/17 19:44:09 [59875] to an rsync daemon, and require SRC or DEST to start with a module name.
+2018/05/17 19:44:09 [59875] 
+2018/05/17 19:44:09 [59875] Options
+2018/05/17 19:44:09 [59875]  -v, --verbose               increase verbosity
+2018/05/17 19:44:09 [59875]  -q, --quiet                 suppress non-error messages
+2018/05/17 19:44:09 [59875]      --no-motd               suppress daemon-mode MOTD (see manpage caveat)
+2018/05/17 19:44:09 [59875]  -c, --checksum              skip based on checksum, not mod-time & size
+2018/05/17 19:44:09 [59875]  -a, --archive               archive mode; same as -rlptgoD (no -H)
+2018/05/17 19:44:09 [59875]      --no-OPTION             turn off an implied OPTION (e.g. --no-D)
+2018/05/17 19:44:09 [59875]  -r, --recursive             recurse into directories
+2018/05/17 19:44:09 [59875]  -R, --relative              use relative path names
+2018/05/17 19:44:09 [59875]      --no-implied-dirs       don't send implied dirs with --relative
+2018/05/17 19:44:09 [59875]  -b, --backup                make backups (see --suffix & --backup-dir)
+2018/05/17 19:44:09 [59875]      --backup-dir=DIR        make backups into hierarchy based in DIR
+2018/05/17 19:44:09 [59875]      --suffix=SUFFIX         set backup suffix (default ~ w/o --backup-dir)
+2018/05/17 19:44:09 [59875]  -u, --update                skip files that are newer on the receiver
+2018/05/17 19:44:09 [59875]      --inplace               update destination files in-place (SEE MAN PAGE)
+2018/05/17 19:44:09 [59875]      --append                append data onto shorter files
+2018/05/17 19:44:09 [59875]  -d, --dirs                  transfer directories without recursing
+2018/05/17 19:44:09 [59875]  -l, --links                 copy symlinks as symlinks
+2018/05/17 19:44:09 [59875]  -L, --copy-links            transform symlink into referent file/dir
+2018/05/17 19:44:09 [59875]      --copy-unsafe-links     only "unsafe" symlinks are transformed
+2018/05/17 19:44:09 [59875]      --safe-links            ignore symlinks that point outside the source tree
+2018/05/17 19:44:09 [59875]  -k, --copy-dirlinks         transform symlink to a dir into referent dir
+2018/05/17 19:44:09 [59875]  -K, --keep-dirlinks         treat symlinked dir on receiver as dir
+2018/05/17 19:44:09 [59875]  -H, --hard-links            preserve hard links
+2018/05/17 19:44:09 [59875]  -p, --perms                 preserve permissions
+2018/05/17 19:44:09 [59875]      --executability         preserve the file's executability
+2018/05/17 19:44:09 [59875]      --chmod=CHMOD           affect file and/or directory permissions
+2018/05/17 19:44:09 [59875]  -o, --owner                 preserve owner (super-user only)
+2018/05/17 19:44:09 [59875]  -g, --group                 preserve group
+2018/05/17 19:44:09 [59875]      --devices               preserve device files (super-user only)
+2018/05/17 19:44:09 [59875]      --specials              preserve special files
+2018/05/17 19:44:09 [59875]  -D                          same as --devices --specials
+2018/05/17 19:44:09 [59875]  -t, --times                 preserve times
+2018/05/17 19:44:09 [59875]  -O, --omit-dir-times        omit directories when preserving times
+2018/05/17 19:44:09 [59875]      --super                 receiver attempts super-user activities
+2018/05/17 19:44:09 [59875]  -S, --sparse                handle sparse files efficiently
+2018/05/17 19:44:09 [59875]  -n, --dry-run               show what would have been transferred
+2018/05/17 19:44:09 [59875]  -W, --whole-file            copy files whole (without rsync algorithm)
+2018/05/17 19:44:09 [59875]  -x, --one-file-system       don't cross filesystem boundaries
+2018/05/17 19:44:09 [59875]  -B, --block-size=SIZE       force a fixed checksum block-size
+2018/05/17 19:44:09 [59875]  -e, --rsh=COMMAND           specify the remote shell to use
+2018/05/17 19:44:09 [59875]      --rsync-path=PROGRAM    specify the rsync to run on the remote machine
+2018/05/17 19:44:09 [59875]      --existing              skip creating new files on receiver
+2018/05/17 19:44:09 [59875]      --ignore-existing       skip updating files that already exist on receiver
+2018/05/17 19:44:09 [59875]      --remove-source-files   sender removes synchronized files (non-dirs)
+2018/05/17 19:44:09 [59875]      --del                   an alias for --delete-during
+2018/05/17 19:44:09 [59875]      --delete                delete extraneous files from destination dirs
+2018/05/17 19:44:09 [59875]      --delete-before         receiver deletes before transfer (default)
+2018/05/17 19:44:09 [59875]      --delete-during         receiver deletes during transfer, not before
+2018/05/17 19:44:09 [59875]      --delete-after          receiver deletes after transfer, not before
+2018/05/17 19:44:09 [59875]      --delete-excluded       also delete excluded files from destination dirs
+2018/05/17 19:44:09 [59875]      --ignore-errors         delete even if there are I/O errors
+2018/05/17 19:44:09 [59875]      --force                 force deletion of directories even if not empty
+2018/05/17 19:44:09 [59875]      --max-delete=NUM        don't delete more than NUM files
+2018/05/17 19:44:09 [59875]      --max-size=SIZE         don't transfer any file larger than SIZE
+2018/05/17 19:44:09 [59875]      --min-size=SIZE         don't transfer any file smaller than SIZE
+2018/05/17 19:44:09 [59875]      --partial               keep partially transferred files
+2018/05/17 19:44:09 [59875]      --partial-dir=DIR       put a partially transferred file into DIR
+2018/05/17 19:44:09 [59875]      --delay-updates         put all updated files into place at transfer's end
+2018/05/17 19:44:09 [59875]  -m, --prune-empty-dirs      prune empty directory chains from the file-list
+2018/05/17 19:44:09 [59875]      --numeric-ids           don't map uid/gid values by user/group name
+2018/05/17 19:44:09 [59875]      --timeout=TIME          set I/O timeout in seconds
+2018/05/17 19:44:09 [59875]  -I, --ignore-times          don't skip files that match in size and mod-time
+2018/05/17 19:44:09 [59875]      --size-only             skip files that match in size
+2018/05/17 19:44:09 [59875]      --modify-window=NUM     compare mod-times with reduced accuracy
+2018/05/17 19:44:09 [59875]  -T, --temp-dir=DIR          create temporary files in directory DIR
+2018/05/17 19:44:09 [59875]  -y, --fuzzy                 find similar file for basis if no dest file
+2018/05/17 19:44:09 [59875]      --compare-dest=DIR      also compare destination files relative to DIR
+2018/05/17 19:44:09 [59875]      --copy-dest=DIR         ... and include copies of unchanged files
+2018/05/17 19:44:09 [59875]      --link-dest=DIR         hardlink to files in DIR when unchanged
+2018/05/17 19:44:09 [59875]  -z, --compress              compress file data during the transfer
+2018/05/17 19:44:09 [59875]      --compress-level=NUM    explicitly set compression level
+2018/05/17 19:44:09 [59875]  -C, --cvs-exclude           auto-ignore files the same way CVS does
+2018/05/17 19:44:09 [59875]  -f, --filter=RULE           add a file-filtering RULE
+2018/05/17 19:44:09 [59875]  -F                          same as --filter='dir-merge /.rsync-filter'
+2018/05/17 19:44:09 [59875]                              repeated: --filter='- .rsync-filter'
+2018/05/17 19:44:09 [59875]      --exclude=PATTERN       exclude files matching PATTERN
+2018/05/17 19:44:09 [59875]      --exclude-from=FILE     read exclude patterns from FILE
+2018/05/17 19:44:09 [59875]      --include=PATTERN       don't exclude files matching PATTERN
+2018/05/17 19:44:09 [59875]      --include-from=FILE     read include patterns from FILE
+2018/05/17 19:44:09 [59875]      --files-from=FILE       read list of source-file names from FILE
+2018/05/17 19:44:09 [59875]  -0, --from0                 all *-from/filter files are delimited by 0s
+2018/05/17 19:44:09 [59875]      --address=ADDRESS       bind address for outgoing socket to daemon
+2018/05/17 19:44:09 [59875]      --port=PORT             specify double-colon alternate port number
+2018/05/17 19:44:09 [59875]      --sockopts=OPTIONS      specify custom TCP options
+2018/05/17 19:44:09 [59875]      --blocking-io           use blocking I/O for the remote shell
+2018/05/17 19:44:09 [59875]      --stats                 give some file-transfer stats
+2018/05/17 19:44:09 [59875]  -8, --8-bit-output          leave high-bit chars unescaped in output
+2018/05/17 19:44:09 [59875]  -h, --human-readable        output numbers in a human-readable format
+2018/05/17 19:44:09 [59875]      --progress              show progress during transfer
+2018/05/17 19:44:09 [59875]  -P                          same as --partial --progress
+2018/05/17 19:44:09 [59875]  -i, --itemize-changes       output a change-summary for all updates
+2018/05/17 19:44:09 [59875]      --out-format=FORMAT     output updates using the specified FORMAT
+2018/05/17 19:44:09 [59875]      --log-file=FILE         log what we're doing to the specified FILE
+2018/05/17 19:44:09 [59875]      --log-file-format=FMT   log updates using the specified FMT
+2018/05/17 19:44:09 [59875]      --password-file=FILE    read password from FILE
+2018/05/17 19:44:09 [59875]      --list-only             list the files instead of copying them
+2018/05/17 19:44:09 [59875]      --bwlimit=KBPS          limit I/O bandwidth; KBytes per second
+2018/05/17 19:44:09 [59875]      --write-batch=FILE      write a batched update to FILE
+2018/05/17 19:44:09 [59875]      --only-write-batch=FILE like --write-batch but w/o updating destination
+2018/05/17 19:44:09 [59875]      --read-batch=FILE       read a batched update from FILE
+2018/05/17 19:44:09 [59875]      --protocol=NUM          force an older protocol version to be used
+2018/05/17 19:44:09 [59875]  -E, --extended-attributes   copy extended attributes
+2018/05/17 19:44:09 [59875]      --cache                 disable fcntl(F_NOCACHE)
+2018/05/17 19:44:09 [59875]  -4, --ipv4                  prefer IPv4
+2018/05/17 19:44:09 [59875]  -6, --ipv6                  prefer IPv6
+2018/05/17 19:44:09 [59875]      --version               print version number
+2018/05/17 19:44:09 [59875] (-h) --help                  show this help (-h works with no other options)
+2018/05/17 19:44:09 [59875] 
+2018/05/17 19:44:09 [59875] Use "rsync --daemon --help" to see the daemon-mode command-line options.
+2018/05/17 19:44:09 [59875] Please see the rsync(1) and rsyncd.conf(5) man pages for full documentation.
+2018/05/17 19:44:09 [59875] See http://rsync.samba.org/ for updates, bug reports, and answers
+2018/05/17 19:44:09 [59875] rsync error: syntax or usage error (code 1) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-52/rsync/main.c(1389) [receiver=2.6.9]
