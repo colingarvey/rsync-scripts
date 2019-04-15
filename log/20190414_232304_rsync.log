@@ -1,0 +1,4 @@
+2019/04/14 23:23:04 [89751] receiving file list
+2019/04/14 23:23:06 [89751] rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-52.200.1/rsync/rsync.c(244) [receiver=2.6.9]
+2019/04/14 23:23:06 [89751] rsync: writefd_unbuffered failed to write 171 bytes [generator]: Broken pipe (32)
+2019/04/14 23:23:06 [89751] rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-52.200.1/rsync/io.c(1122) [generator=2.6.9]
