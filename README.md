@@ -1,7 +1,18 @@
 # Colin's Media Transfer Procedures
 
-## Photos/ rsync protocol
-### Transfer from External HDD to NAS
+# Photos/ rsync protocol
+## Transfer from External SSD to NAS from macOS:
+
+Updated 20190414:
+
+- Connect External SSD and ensure that it is mounted at /Volumes/ColinGarvey_T5
+- Run ./rsync_exthdd_to_nas.py script which automatically:
+ - Mounts the Photos directory on the NAS
+ - Synchronizes Photos
+ - Synchronizes Videos (FCP)
+
+## Transfer from External HDD to NAS via USB port
+
 1. Plug external HDD to NAS via USB
 2.   ssh to the nas while on LAN
 ```
@@ -22,7 +33,9 @@ Variables are defined in this script as:
 SRC=/volumeUSB1/usbshare1-2/Photos
 TGT=/volume1/Photos
 ```
-### Transfer from NAS to external HDD
+
+## Transfer from NAS to external HDD
 1. Plug external HDD to mac
 2. Run the rsync script - rsync-nas-to-exthdd.sh
 3. Voila!
+
